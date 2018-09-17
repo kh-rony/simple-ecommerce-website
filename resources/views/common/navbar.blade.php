@@ -81,8 +81,8 @@
 								Login / Register<span class="caret"></span>
 							</a>
 							<div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-								<a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
 								<a class="dropdown-item" href="{{ route('login') }}">{{ __('Login') }}</a>
+								<a class="dropdown-item" href="{{ route('register') }}">{{ __('Register') }}</a>
 							</div>
 						</li>
 					@endauth

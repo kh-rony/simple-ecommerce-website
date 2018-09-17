@@ -10,10 +10,12 @@
 
 		<br>
 
-		<div class="row justify-content-center">
-			<div class="col-md-8">
-				<div class="card">
-					<div class="card-header">Edit Product Form</div>
+		@if( Route::has('login') && Auth::check() && Auth::user()->user_type == 1 )
+
+			<div class="row justify-content-center">
+				<div class="col-md-8">
+					<div class="card">
+						<div class="card-header">Edit Product Form</div>
 						<div class="card-body">
 							<form method="post" action="{{url('/')}}/update-product-info">
 								@csrf
@@ -120,8 +122,10 @@
 					</div>
 				</div>
 			</div>
-		</div>
 
+		@else
+			<div>Warning! You have no permission to access this page.</div>
+		@endif
 
 	</div>
 
